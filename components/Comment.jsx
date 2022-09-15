@@ -20,14 +20,14 @@ export default function Comment(props) {
           <span className="fw-semibold">{props.username}</span>
           <br />
           <span>{props.commentText}</span>
-          <div className="d-flex align-items-center gap-1">
-            <img src={"/like.svg"} width={20}></img>
-            {props.likeNum > 0 ? (
+          {props.likeNum > 0 ? (
+            <div className="d-flex align-items-center gap-1">
+              <img src={"/like.svg"} width={20}></img>
               <span className="text-muted">{props.likeNum}</span>
-            ) : (
-              <span> </span>
-            )}
-          </div>
+            </div>
+          ) : (
+            <span> </span>
+          )}
         </div>
       </div>
       {/*render Reply here... */}
