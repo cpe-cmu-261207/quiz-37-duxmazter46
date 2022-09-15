@@ -19,14 +19,14 @@ export default function Reply(props) {
 
         <span>{props.replyText}</span>
         <br />
-        {props.likeNum > 0 ? (
-          <span>
-            <img src={"/like.svg"} width={20} />
-            <span className="text-muted">{props.likeNum}</span>
-          </span>
-        ) : (
-          <span> </span>
-        )}
+        <div className="d-flex align-items-center gap-1">
+            <img src={"/like.svg"} width={20}></img>
+            {props.likeNum > 0 ? (
+              <span className="text-muted">{props.likeNum}</span>
+            ) : (
+              <span> </span>
+            )}
+          </div>
       </div>
     </div>
   );
